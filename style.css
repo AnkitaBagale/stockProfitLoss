@@ -1,0 +1,52 @@
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-image: url("./Images/offWhiteBg2.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+}
+
+.displayFlex{
+    background-color: black;
+    display: flex;
+    margin: 4rem auto;
+    max-width: 80%;
+    min-height: 80vh;
+    box-shadow: 0 40px 40px -10px #8b8b8b;
+}
+
+.col1{
+    width: 60%;
+    background-image: url("./Images/blackBg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: inherit;
+
+}
+
+.col2{
+    width: 40%;
+    background-image: url("./Images/orangeBg.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    min-height: inherit;
+}
+
+.section{
+    position: relative;
+}
+
+.imgOverlap{
+    position: absolute;
+    top: -67px;
+    left: 52%;  
+}
+.imgOverlap img{
+    height: 90vh;  
+    object-fit: fill;
+}
