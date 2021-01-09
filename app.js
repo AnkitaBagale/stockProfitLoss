@@ -26,7 +26,7 @@ function checkHandler(e){
             if(CP>SP){
                 var loss = ((CP-SP)*Qty).toFixed(2);
                 var lossPer=(((CP-SP)*100)/CP.toFixed(2)) ;
-                output.innerHTML=  `<span style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You lost ${lossPer}%. Your total loss is ₹${loss}</span>`;
+                output.innerHTML=  `<div style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You lost ${lossPer}%. Your total loss is ₹${loss}</div>`;
 
                 if(lossPer>50){
                     cols[0].classList.add("transperantBg");
@@ -39,7 +39,7 @@ function checkHandler(e){
             else{
                 let profit = ((SP-CP)*Qty).toFixed(2)
                 let profitPer=(((SP-CP)*100)/CP).toFixed(2) ;
-                output.innerHTML=  `<span style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You gained ${profitPer}%. Your total profit is ₹${profit}</span>`;
+                output.innerHTML=  `<div style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You gained ${profitPer}%. Your total profit is ₹${profit}</div>`;
                 // output.style.backgroundImage = "url('./Images/money.gif')";
                 if(profitPer>50){
                 cols[0].classList.add("transperantBg");
