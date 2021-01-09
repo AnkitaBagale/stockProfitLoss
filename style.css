@@ -40,6 +40,7 @@ body{
     background-repeat: no-repeat;
     min-height: inherit;
     position: relative;
+    padding-bottom: 1rem;
 }
 .logo{
     position: absolute;
@@ -70,6 +71,8 @@ body{
 
 a.link{
     text-decoration: none;
+    position: relative;
+    z-index: 10;
 }
 a.secondary-link{
     padding: 0.5rem 2rem;
@@ -77,20 +80,16 @@ a.secondary-link{
     margin: 2rem 3rem 0rem 3rem;
     width: fit-content;
     border: 2px solid var(--offWhite);
-    position: relative;
     font-weight: 500;
-    z-index: 10;
 }
 nav{
     padding: 1rem;
     text-align: right;
-    z-index: 100;
 }
 nav ul{
     position: relative;
     list-style: none;
     padding-inline-start: 0px;
-    z-index: 100;
 }
 nav a:hover{
     border-bottom: 1px solid white;
@@ -103,6 +102,8 @@ a.secondary-link:hover{
 
 .main-section{
     padding: 0 4rem;
+    position: relative;
+    z-index: 10;
 }
 input{
     border: none;
@@ -129,8 +130,9 @@ button:hover{
 
 .output{
     text-align: center;
-    margin: 1rem 0;
+    margin-top: 1rem;
     padding: 1rem;
+    font-size: 1.2rem;
 }
 label{
     font-weight: 400;
@@ -153,6 +155,8 @@ label{
     .displayFlex{
         display: block;
         max-width: 100%;
+        min-height: 50vh;
+        box-shadow: 0 40px 40px -10px var(--grey), 0 -40px 40px -10px var(--offWhite);
     }
     .col1{
         width: 100%;
@@ -173,5 +177,9 @@ label{
         display: inline-block;
         border: none;
         margin-bottom: 1rem;
+    }
+    .imgOverlap img{
+        width: 100%;
+        min-height: 20vh;
     }
 }
