@@ -12,6 +12,7 @@ function checkHandler(e){
     cols[0].classList.remove("transperantBg");
     cols[1].classList.remove("transperantBg");
     contentDiv.classList.remove("sadTheme");
+    contentDiv.classList.remove("happyTheme");
 
     var CP = inputs[0].value;
     var Qty = inputs[1].value;
@@ -26,7 +27,6 @@ function checkHandler(e){
                 var loss = ((CP-SP)*Qty).toFixed(2);
                 var lossPer=(((CP-SP)*100)/CP.toFixed(2)) ;
                 output.innerHTML=  `You lost ${lossPer}%. Your total loss is ₹${loss}`;
-                output.style.backgroundImage = "url('./Images/sad2.gif')";
 
                 if(lossPer>50){
                     cols[0].classList.add("transperantBg");
@@ -41,17 +41,20 @@ function checkHandler(e){
             else{
                 let profit = ((SP-CP)*Qty).toFixed(2)
                 let profitPer=(((SP-CP)*100)/CP).toFixed(2) ;
-                output.innerHTML=  `<span style="background-color: rgb(0,0,0,0.5)">You gained ${profitPer}%. Your total profit is ₹${profit}</span>`;
-                output.style.backgroundImage = "url('./Images/money.gif')";
+                output.innerHTML=  `<span style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You gained ${profitPer}%. Your total profit is ₹${profit}</span>`;
+                // output.style.backgroundImage = "url('./Images/money.gif')";
+                if(profit>50){
+                cols[0].classList.add("transperantBg");
+                cols[1].classList.add("transperantBg");
+                contentDiv.classList.add("happyTheme");
+                }
             }
         }else{
             //error
             output.innerHTML=`Please enter values greater than 0 (only numbers are allowed in above fields)`
-            output.style.backgroundImage = "";
         }
     }else{
         //error
         output.innerHTML="Please enter values greater than 0 (only numbers are allowed in above fields)"
-        output.style.backgroundImage = "";
     }
 }

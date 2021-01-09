@@ -7,8 +7,8 @@
 
 *{
     box-sizing: border-box;
-    color: white;
-    font-family: 'Noto Sans JP', sans-serif;;
+    font-family: 'Noto Sans JP', sans-serif;
+    color:white;
 }
 h1{
     font-family: 'Noto Serif', serif;
@@ -130,10 +130,9 @@ button:hover{
 }
 
 .output{
-    text-align: center;
-    margin-top: 1rem;
-    padding: 1rem;
+    margin-top: 2rem;
     font-size: 1.2rem;
+    margin-bottom: 1rem;
 }
 label{
     font-weight: 400;
@@ -143,6 +142,11 @@ label{
 
 .section .sadTheme{
     background-image:url("./Images/sad2.gif");
+    background-size: 100% 100%;
+}
+
+.section .happyTheme{
+    background-image:url("./Images/confetti.gif");
     background-size: 100% 100%;
 }
 
