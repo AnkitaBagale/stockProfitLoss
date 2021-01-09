@@ -32,8 +32,6 @@ function checkHandler(e){
                     cols[0].classList.add("transperantBg");
                     cols[1].classList.add("transperantBg");
                     contentDiv.classList.add("sadTheme");
-
-                    console.log(contentDiv, cols);
                 }
 
             }
@@ -43,7 +41,7 @@ function checkHandler(e){
                 let profitPer=(((SP-CP)*100)/CP).toFixed(2) ;
                 output.innerHTML=  `<span style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You gained ${profitPer}%. Your total profit is ₹${profit}</span>`;
                 // output.style.backgroundImage = "url('./Images/money.gif')";
-                if(profit>50){
+                if(profitPer>50){
                 cols[0].classList.add("transperantBg");
                 cols[1].classList.add("transperantBg");
                 contentDiv.classList.add("happyTheme");
