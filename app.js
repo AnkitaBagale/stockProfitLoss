@@ -36,8 +36,6 @@ function checkHandler(e){
                     console.log(contentDiv, cols);
                 }
 
-
-
             }
             //profit
             else{

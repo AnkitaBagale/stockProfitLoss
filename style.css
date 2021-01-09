@@ -149,10 +149,6 @@ label{
 .transperantBg{
     background-image: url("");
 }
-.main-section{
-    padding: 0 1rem;
-}
-
 
 @media screen and (max-width:1023px){
 
@@ -189,5 +185,8 @@ label{
     .imgOverlap{
         bottom: -5px;
         left: -10%;  
+    }
+    .main-section{
+        padding: 0 1rem;
     }
 }
