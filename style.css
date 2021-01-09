@@ -81,6 +81,7 @@ a.secondary-link{
     width: fit-content;
     border: 2px solid var(--offWhite);
     font-weight: 500;
+    text-align: center;
 }
 nav{
     padding: 1rem;
@@ -148,9 +149,12 @@ label{
 .transperantBg{
     background-image: url("");
 }
+.main-section{
+    padding: 0 1rem;
+}
 
 
-@media screen and (max-width:769px){
+@media screen and (max-width:1023px){
 
     .displayFlex{
         display: block;
@@ -169,10 +173,9 @@ label{
     .col2{
         width: 100%;
         /* display: none; */
+        min-height: 50vh;
     }
-    .main-section{
-        padding: 0 1rem;
-    }
+    
     label{
         display: inline-block;
         border: none;
@@ -180,6 +183,11 @@ label{
     }
     .imgOverlap img{
         width: 100%;
-        min-height: 20vh;
+        min-height: 40vh;
+        max-height: 70vh;
+    }
+    .imgOverlap{
+        bottom: -5px;
+        left: -10%;  
     }
 }
