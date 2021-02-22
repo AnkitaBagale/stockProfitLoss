@@ -1,8 +1,8 @@
-var form = document.forms[0];
-var inputs = document.querySelectorAll(".input");
-var output = document.querySelector(".output");
-var contentDiv = document.querySelector(".displayFlex");
-var cols=document.querySelectorAll(".col");
+const form = document.forms[0];
+const inputs = document.querySelectorAll(".input");
+const output = document.querySelector(".output");
+const contentDiv = document.querySelector(".displayFlex");
+const cols=document.querySelectorAll(".col");
 
 
 form.addEventListener("submit", checkHandler);
@@ -14,9 +14,9 @@ function checkHandler(e){
     contentDiv.classList.remove("sadTheme");
     contentDiv.classList.remove("happyTheme");
 
-    var CP = inputs[0].value;
-    var Qty = inputs[1].value;
-    var SP = inputs[2].value;
+    let CP = inputs[0].value;
+    let Qty = inputs[1].value;
+    let SP = inputs[2].value;
     if( !isNaN(CP) && !isNaN(Qty) && !isNaN(SP)){
         CP = Number(CP);
         Qty = Number(Qty);
@@ -24,8 +24,8 @@ function checkHandler(e){
         if(CP>0 && Qty>0 && SP>0){
             //loss
             if(CP>SP){
-                var loss = ((CP-SP)*Qty).toFixed(2);
-                var lossPer=(((CP-SP)*100)/CP).toFixed(2) ;
+                const loss = ((CP-SP)*Qty).toFixed(2);
+                const lossPer=(((CP-SP)*100)/CP).toFixed(2) ;
                 output.innerHTML=  `<div style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You lost ${lossPer}%. Your total loss is ₹${loss}</div>`;
 
                 if(lossPer>50){
@@ -37,8 +37,8 @@ function checkHandler(e){
             }
             //profit
             else{
-                let profit = ((SP-CP)*Qty).toFixed(2)
-                let profitPer=(((SP-CP)*100)/CP).toFixed(2) ;
+                const profit = ((SP-CP)*Qty).toFixed(2)
+                const profitPer=(((SP-CP)*100)/CP).toFixed(2) ;
                 output.innerHTML=  `<div style="background-color: rgb(255, 255,255,0.2); padding: 1rem">You gained ${profitPer}%. Your total profit is ₹${profit}</div>`;
                 // output.style.backgroundImage = "url('./Images/money.gif')";
                 if(profitPer>50){
